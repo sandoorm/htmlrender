@@ -4,6 +4,7 @@ const express = require('express');
 const puppeteer = require('puppeteer');
 const bodyParser = require('body-parser');
 const fs = require('fs');
+var MY_TABLE_HTML;
 
 // Constants
 const PORT = 2078;
