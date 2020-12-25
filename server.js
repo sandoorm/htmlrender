@@ -1,10 +1,10 @@
 'use strict';
 
+const MY_TABLE_HTML = require( __dirname + "/table.html");
 const express = require('express');
 const puppeteer = require('puppeteer');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-var MY_TABLE_HTML;
 
 // Constants
 const PORT = 2078;
@@ -23,14 +23,6 @@ app.use(bodyParser.urlencoded({
 	extended: true,
 	parameterLimit: 50000
 }));
-
-fs.readFile(__dirname + "/table.html", function (error, html) {
-	if (error) {
-	  throw error;
-	}
-
-	MY_TABLE_HTML = html;
-  });
 
 app.use(function (req, res, next) {
 	if (req.is('text/*')) {
