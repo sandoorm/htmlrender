@@ -1,9 +1,9 @@
 'use strict';
 
+const MY_TABLE_HTML = require( './table.html' );
 const express = require('express');
 const puppeteer = require('puppeteer');
 const bodyParser = require('body-parser');
-import MY_TABLE_HTML from 'table.html';
 
 // Constants
 const PORT = 2078;
