@@ -30,7 +30,6 @@ fs.readFile(__dirname + "/table.html", function (error, html) {
 	}
 
 	MY_TABLE_HTML = html;
-	res.end(html);
   });
 
 app.use(function (req, res, next) {
