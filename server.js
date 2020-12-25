@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 	parameterLimit: 50000
 }));
 
-fs.readFile("./table.html", function (error, html) {
+fs.readFile(__dirname + "/table.html", function (error, html) {
 	if (error) {
 	  throw error;
 	}
