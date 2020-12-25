@@ -23,11 +23,11 @@ app.use(bodyParser.urlencoded({
 	parameterLimit: 50000
 }));
 
-fs.readFile("/table.html", function (error, html) {
+fs.readFile("./table.html", function (error, html) {
 	if (error) {
 	  throw error;
 	}
-	
+
 	MY_TABLE_HTML = html;
 	res.end(html);
   });
