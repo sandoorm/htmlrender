@@ -1,6 +1,5 @@
 'use strict';
 
-const MY_TABLE_HTML = require( __dirname + "/table");
 const express = require('express');
 const puppeteer = require('puppeteer');
 const bodyParser = require('body-parser');
@@ -112,11 +111,11 @@ function render(req, res) {
 	if (req.is('application/json')) {
 		// If you are using a header and/or footer, then you probably want to specify
 		// top and bottom margin
-		headerHtml = MY_TABLE_HTML.header;
-		bodyHtml = MY_TABLE_HTML.body;
-		footerHtml = MY_TABLE_HTML.footer;
+		headerHtml = req.body.header;
+		bodyHtml = req.body.body;
+		footerHtml = req.body.footer;
 	} else if (req.text !== undefined) {
-		bodyHtml = MY_TABLE_HTML.body;
+		bodyHtml = req.text;
 	} else {
 		res.status(400).send('The body must have Content-Type:text/html');
 		return;
