@@ -1,6 +1,6 @@
 'use strict';
 
-const htmlInclude = require( __dirname + "/table.html");
+const MY_TABLE_HTML = require( __dirname + "/table");
 const express = require('express');
 const puppeteer = require('puppeteer');
 const bodyParser = require('body-parser');
@@ -13,7 +13,6 @@ const HOST = '0.0.0.0';
 const app = express();
 
 let renderCount = 0;
-let MY_TABLE_HTML = htmlInclude.toString();
 
 app.use(bodyParser.json({
 	limit: '50mb'

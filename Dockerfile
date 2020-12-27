@@ -22,6 +22,6 @@ COPY package*.json ./
 RUN npm install
 
 # This is the second phase, which is always very fast
-COPY ["server.js", "table.html", "./"]
+COPY ["server.js", "table", "./"]
 
 CMD ["npm", "start"]
